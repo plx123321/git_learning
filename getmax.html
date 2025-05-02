@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Test Page</title>
+</head>
+
+<body>
+  <h1>Welcome to My Test Page</h1>
+  <p>This is a simple HTML page.</p>
+</body>
+<script>
+  arr = [0]
+  function getMax(arr = [0]) {
+    if (arr.length === 0) {
+      return null; // Return null if the array is empty
+    }
+    arr.forEach((element) => {
+      if (typeof element !== 'number') {
+        throw new Error('All elements must be numbers');
+      }
+    });
+    let x1 = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] > x1) {
+        x1 = arr[i];
+      };
+    }
+    return  x1; // Return the maximum value found
+  }
+
+  // Example usage:
+  arr = [1, 2, 3, 4, 5,6,7,8,9,10];
+  const max = getMax(arr);
+  if (max === null) {
+    console.log("The array is empty.");
+  } else {
+    console.log("The maximum value is:", max);
+  }
+  // Example usage with an empty array
+  arr = [];
+  const maxEmpty = getMax(arr);
+  if (maxEmpty === null) {
+    console.log("The array is empty.");
+  } else {
+    console.log("The maximum value is:", maxEmpty);
+  }
+  console.log("The maximum value is:", max);
+</script>
+
+</html>
