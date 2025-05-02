@@ -93,7 +93,7 @@ if __name__ == "__main__":
     # Prompt user to select source and backup directories
   print("Please select the source directory:")
   print("Please select the backup directory:")
-  source_directory = filedialog.askdirectory(title="Select Source Directory")
+  source_directory = filedialog.askdirectory(title="Select Source Direc")
   backup_directory = filedialog.askdirectory(title="Select Backup Directory")
   backup_files(source_directory, backup_directory)
 
