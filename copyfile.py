@@ -91,7 +91,7 @@ if __name__ == "__main__":
   root = tk.Tk()    
   root.withdraw()  # Hide the main window
     # Prompt user to select source and backup directories
-  print("Please select the source directory:")
+ 
   print("Please select the backup directory:")
   source_directory = filedialog.askdirectory(title="Select Source Direc")
   backup_directory = filedialog.askdirectory(title="Select Backup Directory")
